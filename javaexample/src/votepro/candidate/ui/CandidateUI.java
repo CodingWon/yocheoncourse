@@ -8,6 +8,10 @@ import java.util.Arrays;
 public class CandidateUI {
     CandidateService candidateService;
 
+    public CandidateUI(CandidateService candidateService){
+        this.candidateService = candidateService;
+    }
+
     public void display(){
         CandidateVO[] candidates = candidateService.showCandidate();
         Arrays.stream(candidates).forEach(vo -> System.out.println("기호"+vo.getCno() +"번 " + vo.getName() + "," + vo.getParty()));
