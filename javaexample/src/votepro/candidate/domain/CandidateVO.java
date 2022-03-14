@@ -9,6 +9,26 @@ public class CandidateVO {
         this.cno = cno;
         this.name = name;
         this.party = party;
+    }
 
+    public Integer getCno() {
+        return cno;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getParty() {
+        return party;
+    }
+
+    @Override
+    public String toString() {
+        return "CandidateVO{" +
+                "cno=" + cno +
+                ", name='" + name + '\'' +
+                ", party='" + party + '\'' +
+                '}';
     }
 }
