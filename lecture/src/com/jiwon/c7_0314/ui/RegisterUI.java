@@ -1,10 +1,10 @@
 package com.jiwon.c7_0314.ui;
 
-import com.jiwon.c6_0311.ui.BasicUI;
+
 
 import java.util.Scanner;
 
-public class RegisterUI extends BasicUI {
+public class RegisterUI extends BasiceUI {
 
 
     public RegisterUI(Scanner scaner) {
@@ -12,7 +12,7 @@ public class RegisterUI extends BasicUI {
     }
 
     @Override
-    public void execute() {
+    public void excute() {
         System.out.println("등록 화면");
     }
 }

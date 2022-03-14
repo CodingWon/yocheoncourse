@@ -1,18 +1,16 @@
 package com.jiwon.c7_0314.ui;
 
-import com.jiwon.c6_0311.ui.BasicUI;
-import com.jiwon.c6_0311.ui.RegisterUI;
 
 import java.util.Scanner;
 
 public class TotalUI {
 
-    private BasicUI[] uis;
+    private BasiceUI[] uis;
     private Scanner sc;
 
     public TotalUI(Scanner sc){
         this.sc = sc;
-        uis = new BasicUI[3];
+        uis = new BasiceUI[3];
         uis[0] = new ReadUI(sc);
         uis[1] = new RegisterUI(sc);
         uis[2] = new RemoveUI(sc);
@@ -24,7 +22,7 @@ public class TotalUI {
         if(idx == 3)
             return;
 
-        uis[idx].execute();
+        uis[idx].excute();
 
         play();
     }
