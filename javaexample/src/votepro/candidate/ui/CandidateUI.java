@@ -10,7 +10,6 @@ public class CandidateUI {
 
     public void display(){
         CandidateVO[] candidates = candidateService.showCandidate();
-
-        Arrays.stream(candidates).forEach(vo -> System.out.println());
+        Arrays.stream(candidates).forEach(vo -> System.out.println("기호"+vo.getCno() +"번 " + vo.getName() + "," + vo.getParty()));
     }
 }
