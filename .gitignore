@@ -1,0 +1,5 @@
+# Project exclude paths
+/gradlelecture/.gradle/
+/gradlelecture/build/
+/gradlelecture/out/production/classes/
+/out/
