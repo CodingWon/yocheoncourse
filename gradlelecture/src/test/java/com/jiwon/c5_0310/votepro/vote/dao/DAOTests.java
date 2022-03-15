@@ -11,7 +11,7 @@ public class DAOTests {
 
     @BeforeEach
     public void ready(){
-        voteDAO = new VoteDAO();
+        voteDAO = VoteDAO.INSTANCE;
         for(int i = 1; i<=5; i++){
             voteDAO.add(new VoteVO(i,2));
         }

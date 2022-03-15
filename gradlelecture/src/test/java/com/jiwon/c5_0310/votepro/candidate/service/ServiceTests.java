@@ -13,8 +13,8 @@ public class ServiceTests {
 
     @BeforeEach
     public void ready(){
-        CandidateDAO dao = new CandidateDAO();
-        service = new CandidateService(dao);
+        CandidateDAO dao = CandidateDAO.INSTANCE;
+        service = CandidateService.INSTANCE;
     }
 
     @Test

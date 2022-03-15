@@ -14,7 +14,7 @@ public class DAOTests {
     @BeforeEach
     public void ready(){
         System.out.println("ready .....");
-        dao = new CandidateDAO();
+        dao = CandidateDAO.INSTANCE;
     }
 
     @Test

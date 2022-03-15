@@ -11,7 +11,7 @@ public class DaoTests {
 
     @BeforeEach
     public void ready(){
-        voterDAO = new VoterDAO();
+        voterDAO = VoterDAO.INSTANCE;
     }
 
     @Test
