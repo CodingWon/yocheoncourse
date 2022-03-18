@@ -14,7 +14,7 @@ public class CopyTest {
         System.out.println(in);
         OutputStream out = new FileOutputStream("C:\\zzz\\copy.jpg");
 
-        byte[] buffer = new byte[100];
+        byte[] buffer = new byte[8096];
 
         while (true){
             int count = in.read(buffer);
@@ -22,7 +22,7 @@ public class CopyTest {
             if(count == -1)
                 break;
 
-            out.write(buffer);
+            out.write(buffer,0,count);
         }
 
         long end = System.currentTimeMillis();
