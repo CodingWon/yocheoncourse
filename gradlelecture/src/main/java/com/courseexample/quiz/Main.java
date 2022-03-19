@@ -14,7 +14,6 @@ public class Main {
         Scanner sc  = new Scanner(System.in);
         QuizRepository quiz = new MyRepository();
         QuizUI quizUI = new QuizUI(quiz,sc);
-
         quizUI.playQuiz();
     }
 }

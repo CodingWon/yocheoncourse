@@ -15,11 +15,19 @@ public class MyRepository implements QuizRepository{
 
     public MyRepository() throws FileNotFoundException {
         File file = new File("C:\\Users\\JIwon\\IdeaProjects\\yocheoncourse\\gradlelecture\\src\\main\\java\\com\\courseexample\\quiz\\data\\quizdata.txt");
-        Scanner sc = new Scanner(file);
-        quizzes = new Quiz[6];
+        Scanner scCount = new Scanner(file);
+        int cnt = 0;
 
+            while (scCount.hasNext()) {
+                scCount.nextLine();
+                cnt++;
+            }
+
+        Scanner scRead  = new Scanner(file);
+        quizzes = new Quiz[cnt];
+        System.out.println(quizzes.length);
         for(int i =0; i<quizzes.length; i++){
-            String line = sc.nextLine();
+            String line = scRead.nextLine();
             String[] arr = line.split(",");
 
             String title = arr[1];

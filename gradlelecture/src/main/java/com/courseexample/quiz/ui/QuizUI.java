@@ -13,33 +13,32 @@ public class QuizUI {
 
     private QuizRepository quizRepository;
     private Scanner sc;
-    private int cnt;
-    private Quiz[] quizzes;
+    private int num;
+
 
     public QuizUI(QuizRepository quizRepository, Scanner sc) {
         this.quizRepository = quizRepository;
         this.sc = sc;
-        quizzes = quizRepository.getQuiz();
-        cnt = quizzes.length;
-        System.out.println(quizzes.length);
     }
 
     public void playQuiz (){
+        Quiz[] quizzes = quizRepository.getQuiz();
         boolean correct =false;
-
         for(int i =0; i<quizzes.length; i++){
             System.out.println(quizzes[i].getTitle());
             System.out.println(quizzes[i].getDesc());
-            correct = quizzes[i].checkAnswer(sc.nextLine());
+            correct = quizzes[i].checkAnswer(sc.nextLine().toUpperCase());
 
             if(correct){
                 System.out.println("정답");
                 System.out.println("-----------------");
+                num++;
             }else {
                 System.out.println("go back");
-                return;
+                break;
             }
         }
 
+        System.out.println(num+" 개 맞추셨습니다.");
     }
 }
