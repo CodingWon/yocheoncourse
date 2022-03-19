@@ -1,4 +1,4 @@
-package com.jiwon.c7_0314.storeex;
+package com.jiwon.c7_0314_extends.storeex;
 
 public class Main {
 

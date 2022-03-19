@@ -18,14 +18,14 @@ public class QuizTests {
 
     }
 
-    @Test
-    public void test1(){
-        Quiz quiz = OXQuiz.builder().build();
-        quiz.setTitle("세종대왕은 한국 사람이다.");
-        quiz.setAnswer("0");
-
-        System.out.println(quiz.getDesc());
-
-
-    }
+//    @Test
+//    public void test1(){
+//        Quiz quiz = com.courseexample.quiz.domain.Quiz
+//        quiz.setTitle("세종대왕은 한국 사람이다.");
+//        quiz.setAnswer("0");
+//
+//        System.out.println(quiz.getDesc());
+//
+//
+//    }
 }

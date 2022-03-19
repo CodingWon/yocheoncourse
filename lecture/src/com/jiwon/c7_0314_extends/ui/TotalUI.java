@@ -1,4 +1,4 @@
-package com.jiwon.c7_0314.ui;
+package com.jiwon.c7_0314_extends.ui;
 
 
 import java.util.Scanner;
