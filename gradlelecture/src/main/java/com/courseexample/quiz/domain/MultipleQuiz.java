@@ -3,6 +3,8 @@ package com.courseexample.quiz.domain;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Arrays;
+
 @Getter
 @Setter
 public class MultipleQuiz extends Quiz{
@@ -10,8 +12,8 @@ public class MultipleQuiz extends Quiz{
     private String[] arr;
 
     @Override
-    public void getDesc() {
-        System.out.println("객관식 문제입니다.");
+    public String getDesc() {
+        return Arrays.toString(arr);
     }
 
     @Override

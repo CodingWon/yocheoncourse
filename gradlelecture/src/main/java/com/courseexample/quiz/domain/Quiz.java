@@ -10,6 +10,6 @@ public abstract class Quiz {
     public boolean checkAnswer(String userAnswer) {
         return this.answer.equals(userAnswer);
     }
-    public abstract void getDesc();
+    public abstract String getDesc();
     public  String getTitle(){return this.title; }
 }
