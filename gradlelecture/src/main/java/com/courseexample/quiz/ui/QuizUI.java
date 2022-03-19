@@ -7,27 +7,39 @@ import lombok.RequiredArgsConstructor;
 
 import java.util.Scanner;
 
-@RequiredArgsConstructor
+
 public class QuizUI {
 
-    @NonNull
+
     private QuizRepository quizRepository;
-    @NonNull
     private Scanner sc;
+    private int cnt;
+    private Quiz[] quizzes;
+
+    public QuizUI(QuizRepository quizRepository, Scanner sc) {
+        this.quizRepository = quizRepository;
+        this.sc = sc;
+        quizzes = quizRepository.getQuiz();
+        cnt = quizzes.length;
+        System.out.println(quizzes.length);
+    }
 
     public void playQuiz (){
-        Quiz[] quiz = quizRepository.getQuiz();
-        System.out.println(quiz[0].getTitle());
-        System.out.println(quiz[0].getDesc());
-        boolean correct = quiz[0].checkAnswer(sc.nextLine());
+        boolean correct =false;
 
-        if(correct){
-            System.out.println("정답");
-            System.out.println("-----------------");
-            playQuiz();
+        for(int i =0; i<quizzes.length; i++){
+            System.out.println(quizzes[i].getTitle());
+            System.out.println(quizzes[i].getDesc());
+            correct = quizzes[i].checkAnswer(sc.nextLine());
+
+            if(correct){
+                System.out.println("정답");
+                System.out.println("-----------------");
+            }else {
+                System.out.println("go back");
+                return;
+            }
         }
 
-        System.out.println("go back");
-        return;
     }
 }

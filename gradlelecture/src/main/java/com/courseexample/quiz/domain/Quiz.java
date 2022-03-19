@@ -6,6 +6,7 @@ import lombok.Setter;
 public abstract class Quiz {
     private String title;
     private String answer;
+    private String[] arr;
 
     public boolean checkAnswer(String userAnswer) {
         return this.answer.equals(userAnswer);

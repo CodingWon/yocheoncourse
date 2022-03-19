@@ -27,6 +27,6 @@ public class QuizTests {
         multipleQuiz.setAnswer("1");
         System.out.println(multipleQuiz.getTitle());
         System.out.println(Arrays.toString(multipleQuiz.getArr()));
-        System.out.println(multipleQuiz.checkAnswer("1422"));
+        System.out.println(multipleQuiz.checkAnswer("2"));
     }
 }
